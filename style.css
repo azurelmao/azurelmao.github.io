@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS';
+    background-color: cornsilk;
+    color: rgb(53, 46, 43);
+}
+
+input, select {
+    font-family: 'Comic Sans MS';
+    margin: 1px;
+}
+
+input::-webkit-file-upload-button {
+    font-family: 'Comic Sans MS';
+}
+
+h1 {
+    font-family: 'Trebuchet MS';
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h3 {
+    font-family: 'Trebuchet MS';
+    text-align: center;
+}
+
+a {
+    color: lightsalmon;
+    text-decoration: unset;
+
+    transition: color 0.5s;
+}
+
+a:hover {
+    color: blueviolet;
+    text-decoration: underline;
+}
+
+#flexbox {
+    display: flex;
+    justify-content: center;
+}
+
+#hidden {
+    color: rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 50%;
+    left: calc(50% - 3em);
+    padding: 10px;
+    cursor: default;
+}
+
+#footer {
+    padding: 10px 0px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+#sites {
+    display: flex;
+    justify-content: center;
+}
+
+#sites a {
+    border: 10px dashed blanchedalmond;
+    background-color: bisque;
+    color: unset;
+    text-decoration: unset;
+
+    font-size: 14pt;
+
+    width: max-content;
+    padding: 20px 30px;
+    margin: 5px;
+
+    transition-property: border, background-color, color;
+    transition-duration: 0.3s;
+}
+
+#sites a:hover {
+    border: 10px dashed papayawhip;
+    background-color: blanchedalmond;
+    color: rgb(88, 75, 69);
+}
