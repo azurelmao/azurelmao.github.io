@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="style.css">
 
     <script>
-        function submit() {
-
+        function convert() {
+            let form = document.getElementById("form");
+            console.log(form["version"]);
         }
     </script>
 </head>
@@ -19,8 +20,8 @@
     <h1>Texturepack Converter</h1>
 
     <div id="flexbox">
-        <form>
-            Version:
+        <form id="form">
+            <label for="version">Version:</label>
             <select id="version">
                 <option value="1.20.4">1.20.4</option>
                 <option value="b1.7.3">b1.7.3</option>
@@ -28,7 +29,7 @@
             <br>
             <input id="file" type="file">
             <br>
-            <input type="submit" value="Convert" onclick="submit()">
+            <input type="submit" value="Convert">
         </form>
     </div>
 

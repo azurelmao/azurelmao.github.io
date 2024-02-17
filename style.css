@@ -1,21 +1,46 @@
 * {
     box-sizing: border-box;
+    --dark-grey: rgb(53, 46, 43);
+    --light-grey: rgb(88, 75, 69);
+
+    --white-orange: cornsilk;
+    --light-orange: papayawhip;
+    --accent-orange: blanchedalmond;
+    --orange: bisque;
+    --deep-orange: lightsalmon;
+    --deep-violet: blueviolet;
 }
 
 body {
     margin: 0;
     font-family: 'Comic Sans MS';
-    background-color: cornsilk;
-    color: rgb(53, 46, 43);
+    background-color: var(--white-orange);
+    color: var(--dark-grey);
 }
 
-input, select {
+::selection {
+    background-color: var(--deep-orange);
+    color: var(--white-orange);
+}
+
+input {
+    font-family: 'Comic Sans MS';
+}
+
+option:selection {
+    font-style: italic;
+}
+
+input::-webkit-file-upload-button,
+input[type=submit],
+select {
+    border: 1px solid var(--light-grey);
+    border-radius: 3px;
+    background-color: var(--orange);
+    color: var(--dark-grey);
     font-family: 'Comic Sans MS';
     margin: 1px;
-}
 
-input::-webkit-file-upload-button {
-    font-family: 'Comic Sans MS';
 }
 
 h1 {
@@ -30,14 +55,14 @@ h3 {
 }
 
 a {
-    color: lightsalmon;
+    color: var(--deep-orange);
     text-decoration: unset;
 
     transition: color 0.5s;
 }
 
 a:hover {
-    color: blueviolet;
+    color: var(--deep-violet);
     text-decoration: underline;
 }
 
@@ -47,12 +72,18 @@ a:hover {
 }
 
 #hidden {
-    color: rgba(0, 0, 0, 0);
+    color: var(--white-orange);
     position: fixed;
     top: 50%;
     left: calc(50% - 3em);
     padding: 10px;
     cursor: default;
+}
+
+#hidden::selection {
+    background: var(--white-orange);
+    color: var(--light-orange);
+
 }
 
 #footer {
@@ -70,9 +101,9 @@ a:hover {
 }
 
 #sites a {
-    border: 10px dashed blanchedalmond;
-    background-color: bisque;
-    color: unset;
+    border: 10px dashed var(--accent-orange);
+    background-color: var(--orange);
+    color: var(--dark-grey);
     text-decoration: unset;
 
     font-size: 14pt;
@@ -81,12 +112,11 @@ a:hover {
     padding: 20px 30px;
     margin: 5px;
 
-    transition-property: border, background-color, color;
+    transition-property: border, color;
     transition-duration: 0.3s;
 }
 
 #sites a:hover {
-    border: 10px dashed papayawhip;
-    background-color: blanchedalmond;
-    color: rgb(88, 75, 69);
+    border: 10px dashed var(--light-orange);
+    color: var(--light-grey);
 }
